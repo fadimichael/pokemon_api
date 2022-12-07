@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PokemenItem from "../components/PokemonItem";
+import PokemonItemDetail from "../components/PokemonItemDetail";
 import pokemonimg from "../imgs/pokemon.svg";
 const Home = () => {
   const [info, setInfo] = useState([]);
@@ -9,7 +10,7 @@ const Home = () => {
       .then((json) => setInfo(json.results));
   };
   useEffect(fetchData, []);
-  console.log("info", info);
+  // console.log("info", info);
   return (
     <>
       <img src={pokemonimg} alt="" />

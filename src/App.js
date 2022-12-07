@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import PokemonItemDetail from "./components/PokemonItemDetail";
 import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/pokemon/:id" element={<PokemonItemDetail />}></Route>
         </Routes>
-      </BrowserRouter> */}
-      <h1>hallo leute</h1>
-      <Home />
+      </BrowserRouter>
     </div>
   );
 }
